@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom"
+
 export default function Button({ type, link, content, paddingX, paddingY, className, id, rounded, ghost }){
+    const navigate = useNavigate();
     return(
         <button 
             type={type ? type : null}
@@ -8,7 +11,7 @@ export default function Button({ type, link, content, paddingX, paddingY, classN
                     WebkitMaskImage: 'radial-gradient(circle, white 100%, transparent 100%)',
                 }
             } 
-            onClick={link ? () => location.href = link : null}
+            onClick={link ? () => navigate(link) : null}
             id={id ? id : null} 
             className={`
             ${className ? className : null} 

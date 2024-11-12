@@ -5,32 +5,18 @@ import Contact from './components/contact'
 import Footer from './components/footer'
 import Home from './components/home'
 import Navbar from './components/navbar'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <Home />
-  },
-  {
-    path: '/contact',
-    element: <Contact />
-  },
-  {
-    path: '/blog',
-    element: <Blog />
-  },
-  {
-    path: '/blog/:slug',
-    element: <BlogPost />
-  }
-])
+import { Route, Routes } from 'react-router-dom'
 
 function App() {
   return(
     <div>
       <Navbar />
-      <RouterProvider router={router} />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/contact' element={<Contact />} />
+        <Route path='/blog' element={<Blog />} />
+        <Route path='/blog/:slug' element={<BlogPost />} />
+      </Routes>
       <Footer />
     </div>
   )

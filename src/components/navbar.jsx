@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import Button from './button'
+import { Link } from 'react-router-dom'
 
 export default function Navbar(){
   const [state, setState] = useState(false)
@@ -49,9 +50,9 @@ export default function Navbar(){
                             navigation.map((item, idx) => {
                                 return (
                                 <li key={idx} className="text-gray-600 font-teko font-[400] text-[22px] hover:text-skylerBlack transition-all duration-300">
-                                    <a href={item.path}>
+                                    <Link to={item.path}>
                                         { item.title }
-                                    </a>
+                                    </Link>
                                 </li>
                                 )
                             })
