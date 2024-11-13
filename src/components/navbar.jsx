@@ -16,16 +16,16 @@ export default function Navbar(){
   return (
       <nav className="navbar z-20 bg-white w-full border-b fixed">
           <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
-              <div className="flex items-center justify-between gap-3 py-3 md:py-5">
-                    <a href="/">
+              <div className="flex items-center justify-between py-3 md:py-5">
+                    <a className='flex items-center justify-between gap-3' href="/">
                         <img
                             src="/Skyler Dev Logo.png" 
                             width={40} 
                             height={40}
                             alt="Skyler Dev logo"
                         />
+                        <h2 className='font-teko text-skylerBlack font-[700] text-3xl'>Skyler Dev</h2>
                     </a>
-                    <h2 className='font-teko text-skylerBlack font-[700] text-3xl'>Skyler Dev</h2>
                   <div className="md:hidden">
                       <button className="text-gray-700 outline-none p-2 rounded-md focus:border-gray-400 focus:border"
                           onClick={() => setState(!state)}
