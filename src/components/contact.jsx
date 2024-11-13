@@ -1,6 +1,7 @@
 import {  useState } from "react";
 import Button from "./button";
 import emailjs from '@emailjs/browser';
+import { Helmet } from "react-helmet-async";
 
 export default function Contact(){
   const [buttonText, setButtonText] = useState('Submit');
@@ -32,6 +33,12 @@ export default function Contact(){
   }
     return(
 <div className="px-4 py-20 font-teko sm:px-6 md:py-32 lg:px-32 lg:py-40 mx-auto">
+  <Helmet>
+    <title>SKyler Dev | Contact Us</title>
+    <meta name="description" content='We&#39;ve been waiting for you! Contact us via the form.' />
+    <meta property="og:title" content='Skyler Dev | Contact Us' />
+    <meta property="og:description" content='We&#39;ve been waiting for you! Contact us via the form.' />
+  </Helmet>
   <div className="mx-auto">
     <div className="flex flex-col md:flex-row">
       <div className="md:w-[60%]">

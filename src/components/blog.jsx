@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { createClient } from 'contentful';
 import Button from './button';
+import { Helmet } from 'react-helmet-async';
 
 const client = createClient({
     space: 'deugs1v52g73',
@@ -37,6 +38,12 @@ const Blog = () => {
 
   return (
     <div className='md:py-40 py-28 font-teko'>
+      <Helmet>
+        <title>Skyler Dev | Blog</title>
+        <meta name="description" content='Skyler Dev Blog' />
+        <meta property="og:title" content='Skyler Dev | Blog' />
+        <meta property="og:description" content='Skyler Dev Blog' />
+      </Helmet>
       <h1 className='text-center text-7xl md:text-9xl font-[700]'>Our Blog</h1>
       <div className='flex flex-col items-center w-full py-28'>
         {posts.map((post) => (

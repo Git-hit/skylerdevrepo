@@ -6,7 +6,7 @@ export default function WhoWeAre(){
         <div className="md:py-28 py-7 ms-3 md:ms-28">
             <span className="flex flex-col md:flex-row items-baseline md:space-x-4">
                 <p className="font-teko font-[500] text-xl md:text-2xl uppercase">01 Who we are</p>
-                <h1 className="font-[900] md:w-3/4 leading-[0.8] text-3xl md:text-[55px] lg:text-7xl uppercase">We are a creative digital agency specializing in <span className="">web design</span> and <span className="">development</span></h1>
+                <h1 className="font-[900] md:w-3/4 md:leading-[0.8] text-4xl leading-none md:text-[55px] lg:text-7xl uppercase">We are a creative digital agency specializing in <span className="">web design</span> and <span className="">development</span></h1>
             </span>
             <div className="md:py-28 py-7 flex flex-col md:gap-7 lg:gap-0 md:flex-row">
                 <div className="lg:w-1/3">

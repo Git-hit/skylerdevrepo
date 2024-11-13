@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { createClient } from 'contentful';
-import { Helmet } from 'react-helmet';
+import { Helmet } from 'react-helmet-async';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
 
@@ -47,8 +47,8 @@ export default function BlogPost() {
     renderNode: {
       [BLOCKS.PARAGRAPH]: (node, children) => <p className="my-4 leading-[1.8] text-lg">{children}</p>,
       [BLOCKS.HEADING_1]: (node, children) => <h1 className="text-4xl font-bold my-6">{children}</h1>,
-      [BLOCKS.HEADING_2]: (node, children) => <h2 className="text-3xl font-hg font-black my-5">{children}</h2>,
-      [BLOCKS.HEADING_3]: (node, children) => <h3 className="text-2xl font-medium my-4">{children}</h3>,
+      [BLOCKS.HEADING_2]: (node, children) => <h2 className="text-2xl leading-normal md:text-3xl font-hg font-black my-5">{children}</h2>,
+      [BLOCKS.HEADING_3]: (node, children) => <h3 className="text-xl font-medium my-4">{children}</h3>,
       [BLOCKS.UL_LIST]: (node, children) => <ul className="list-disc pl-6">{children}</ul>,
       [BLOCKS.LIST_ITEM]: (node, children) => <li className="mb-2">{children}</li>,
       [INLINES.HYPERLINK]: (node, children) => <a href={node.data.uri} target="_blank" rel="noopener noreferrer" className="underline">{children}</a>,
@@ -59,9 +59,9 @@ export default function BlogPost() {
     return (
       <div className='py-28 lg:px-96 px-6 lg:flex flex-col gap-10 items-center'>
         <Helmet>
-          <title>{post.fields.title}</title>
+          <title>{post.fields.title} | Skyler Dev</title>
           <meta name="description" content={post.fields.metaDescription} />
-          <meta property="og:title" content={post.fields.title} />
+          <meta property="og:title" content={post.fields.title + '| Skyler Dev'} />
           <meta property="og:description" content={post.fields.metaDescription} />
           <meta property="og:image" content={post.fields.titleImage?.fields.file.url} />
         </Helmet>
