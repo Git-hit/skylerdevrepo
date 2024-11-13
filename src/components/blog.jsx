@@ -41,8 +41,9 @@ const Blog = () => {
       <div className='flex flex-col items-center w-full py-28'>
         {posts.map((post) => (
           <div key={post.sys.id} className="flex flex-col-reverse px-7 gap-5 md:flex-row md:w-2/4">
-            <div className='w-3/5 flex flex-col items-start justify-between gap-7'>
-                <h2 className='text-4xl font-ssp font-[100]'>{post.fields.title}</h2>
+            {/* <div className='bg-gray-200 h-px w-full'></div> */}
+            <div className='md:w-3/5 flex flex-col items-start justify-between gap-7'>
+                <h2 className='text-xl md:text-4xl font-ssp font-[100]'>{post.fields.title}</h2>
                 <Button content="Read More" link={`/blog/${post.fields.slug}`} />
             </div>
 

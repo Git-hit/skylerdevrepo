@@ -45,7 +45,7 @@ export default function BlogPost() {
       [MARKS.CODE]: (text) => <code className='bg-gray-100 p-1'>{text}</code>
     },
     renderNode: {
-      [BLOCKS.PARAGRAPH]: (node, children) => <p className="my-4 text-lg">{children}</p>,
+      [BLOCKS.PARAGRAPH]: (node, children) => <p className="my-4 leading-[1.8] text-lg">{children}</p>,
       [BLOCKS.HEADING_1]: (node, children) => <h1 className="text-4xl font-bold my-6">{children}</h1>,
       [BLOCKS.HEADING_2]: (node, children) => <h2 className="text-3xl font-hg font-black my-5">{children}</h2>,
       [BLOCKS.HEADING_3]: (node, children) => <h3 className="text-2xl font-medium my-4">{children}</h3>,
