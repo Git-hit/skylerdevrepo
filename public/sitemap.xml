@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+      <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+        <url>
+        <loc>https://skylerdev.netlify.app/</loc>
+        <lastmod>2024-11-15T20:55:34.155Z</lastmod>
+        <changefreq>daily</changefreq>
+      </url>
+        <url>
+          <loc>https://skylerdev.netlify.app/how-i-created</loc>
+          <lastmod>2024-11-11T20:35:09.068Z</lastmod>
+          <changefreq>weekly</changefreq>
+        </url>
+      
+      </urlset>
