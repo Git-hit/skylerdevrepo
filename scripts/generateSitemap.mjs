@@ -4,8 +4,8 @@ import { join } from 'path';
 
 // Contentful configuration
 const client = contentful.createClient({
-  space: 'YOUR_SPACE_ID',
-  accessToken: 'YOUR_ACCESS_TOKEN',
+  space: 'deugs1v52g73',
+  accessToken: '1lQOYwKnIqhWbuSww8XaGsuXhrG6-54NHotbNYKru0Y',
 });
 
 async function generateSitemap() {
