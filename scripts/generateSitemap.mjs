@@ -12,23 +12,32 @@ async function generateSitemap() {
   try {
     // Fetch entries from Contentful
     const entries = await client.getEntries({
-      content_type: 'YOUR_CONTENT_TYPE_ID', // Replace with your Content Type ID
+      content_type: 'blogPost', // Replace with your actual content type ID
     });
 
-    // Generate URLs
-    const urls = entries.items.map((item) => {
+    // Start with homepage URL
+    const urls = [
+      `<url>
+        <loc>https://skylerdev.netlify.app/</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+      </url>`
+    ];
+
+    // Add Contentful entries to the sitemap
+    entries.items.forEach((item) => {
       const slug = item.fields.slug; // Adjust based on your Contentful setup
       const lastMod = new Date(item.sys.updatedAt).toISOString();
-      return `
+      urls.push(`
         <url>
-          <loc>https://skylerdev.com/${slug}</loc>
+          <loc>https://skylerdev.netlify.app/${slug}</loc>
           <lastmod>${lastMod}</lastmod>
           <changefreq>weekly</changefreq>
         </url>
-      `;
+      `);
     });
 
-    // Build the sitemap
+    // Build the sitemap XML
     const sitemapContent = `
       <?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
