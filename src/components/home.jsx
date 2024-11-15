@@ -8,7 +8,7 @@ export default function Home(){
     return(
         <>
             <Helmet>
-                <title>Skyler Dev</title>
+                <title>Skyler Dev | Best Website Development In Delhi</title>
                 <meta name="description" content='We create websites that shine' />
                 <meta property="og:title" content='Skyler Dev' />
                 <meta property="og:description" content='We create websites that shine' />
