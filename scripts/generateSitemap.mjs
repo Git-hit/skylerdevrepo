@@ -1,9 +1,9 @@
-import contentful from 'contentful';
+import { createClient } from 'contentful';
 import { writeFile } from 'fs/promises';
 import { join } from 'path';
 
 // Contentful configuration
-const client = contentful.createClient({
+const client = createClient({
   space: 'deugs1v52g73',
   accessToken: '1lQOYwKnIqhWbuSww8XaGsuXhrG6-54NHotbNYKru0Y',
 });
