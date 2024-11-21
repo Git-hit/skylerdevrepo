@@ -4,6 +4,7 @@ import { createClient } from 'contentful';
 import { Helmet } from 'react-helmet-async';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
+import BlogPostCTA from './blogPostCTA';
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -65,6 +66,10 @@ export default function BlogPost() {
           <meta property="og:description" content={post.fields.metaDescription} />
           <meta property="og:image" content={post.fields.titleImage?.fields.file.url} />
         </Helmet>
+
+        <div className='fixed left-0 top-28 w-1/4 h-screen flex items-center'>
+          <BlogPostCTA />
+        </div>
 
         {post.fields.titleImage && (
             <img

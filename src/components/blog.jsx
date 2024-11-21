@@ -45,7 +45,7 @@ const Blog = () => {
         <meta property="og:description" content='Skyler Dev Blog' />
       </Helmet>
       <h1 className='text-center text-7xl md:text-9xl font-[700]'>Our Blog</h1>
-      <div className='flex flex-col items-center w-full py-28'>
+      <div className='flex flex-col gap-10 items-center w-full py-28'>
         {posts.map((post) => (
           <div key={post.sys.id} className="flex flex-col-reverse px-7 gap-5 md:flex-row md:w-2/4">
             {/* <div className='bg-gray-200 h-px w-full'></div> */}

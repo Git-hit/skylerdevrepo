@@ -3,6 +3,7 @@ import Features from "./features";
 import Hero from "./hero";
 import WhoWeAre from "./whoWeAre";
 import TabNavs from "./tabnavs";
+import TechStack from "./techStack";
 
 export default function Home(){
     return(
@@ -17,6 +18,7 @@ export default function Home(){
             <WhoWeAre />
             <Features />
             <TabNavs />
+            <TechStack />
         </>
     )
 }

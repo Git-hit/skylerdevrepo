@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom"
 
-export default function Button({ type, link, content, paddingX, paddingY, className, id, rounded, ghost }){
+export default function Button({ type, link, content, paddingX, paddingY, className, id, rounded, ghost, bgClassName }){
     const navigate = useNavigate();
     return(
         <button 
@@ -24,7 +24,7 @@ export default function Button({ type, link, content, paddingX, paddingY, classN
             ${ghost ? 'bg-transparent border border-skylerBlack' : 'bg-skylerBlue'} 
             ${rounded ? 'rounded-full' : 'rounded-sm'}
             `}>
-            <span className="w-0 h-full rounded-sm absolute top-0 right-0 group-hover:left-0 group-hover:right-[unset] group-hover:w-full transition-all duration-300 bg-skylerBlack"></span>
+            <span className={`${bgClassName} w-0 h-full rounded-sm absolute top-0 right-0 group-hover:left-0 group-hover:right-[unset] group-hover:w-full transition-all duration-300 bg-skylerBlack`}></span>
             <span className={`font-teko font-[600] text-xl ${ghost ? 'text-skylerBlack group-hover:text-white' : 'text-white'} z-10 relative whitespace-nowrap`}>{content}</span>
         </button>
     )
