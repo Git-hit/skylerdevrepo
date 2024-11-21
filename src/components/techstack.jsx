@@ -1,7 +1,6 @@
 import * as icons from 'simple-icons';
 
 export default function TechStack() {
-    // Configuration for rows with the number of icons and their respective names
     const mdRows = {
         1: [],
         2: ["Javascript", "React", "Nodedotjs", "Html5", "Css3", "Redux", "Nextdotjs", "Jquery"],
