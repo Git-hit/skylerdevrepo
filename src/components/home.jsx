@@ -18,7 +18,7 @@ export default function Home(){
             <WhoWeAre />
             <Features />
             <TabNavs />
-            <TechStack />
+            {/* <TechStack /> */}
         </>
     )
 }
