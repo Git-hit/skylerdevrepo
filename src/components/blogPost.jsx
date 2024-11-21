@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet-async';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 import { BLOCKS, INLINES, MARKS } from '@contentful/rich-text-types';
 import BlogPostCTA from './blogPostCTA';
+import Popup from './popup';
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -55,37 +56,40 @@ export default function BlogPost() {
       [INLINES.HYPERLINK]: (node, children) => <a href={node.data.uri} target="_blank" rel="noopener noreferrer" className="underline">{children}</a>,
     },
   };
-    
+
   if (post) {
     return (
-      <div className='py-28 lg:px-96 px-6 lg:flex flex-col gap-10 items-center'>
-        <Helmet>
-          <title>{post.fields.title} | Skyler Dev</title>
-          <meta name="description" content={post.fields.metaDescription} />
-          <meta property="og:title" content={post.fields.title + '| Skyler Dev'} />
-          <meta property="og:description" content={post.fields.metaDescription} />
-          <meta property="og:image" content={post.fields.titleImage?.fields.file.url} />
-        </Helmet>
+      <>
+        <Popup />
+        <div className='py-28 lg:px-96 px-6 lg:flex flex-col gap-10 items-center'>
+          <Helmet>
+            <title>{post.fields.title} | Skyler Dev</title>
+            <meta name="description" content={post.fields.metaDescription} />
+            <meta property="og:title" content={post.fields.title + '| Skyler Dev'} />
+            <meta property="og:description" content={post.fields.metaDescription} />
+            <meta property="og:image" content={post.fields.titleImage?.fields.file.url} />
+          </Helmet>
 
-        <div className='fixed left-0 top-28 w-1/4 h-screen flex items-center'>
-          <BlogPostCTA />
-        </div>
+          <div className='fixed left-0 top-28 w-1/4 h-screen flex items-center'>
+            <BlogPostCTA />
+          </div>
 
-        {post.fields.titleImage && (
+          {post.fields.titleImage && (
             <img
-                src={post.fields.titleImage.fields.file.url}
-                alt={post.fields.title}
-                className="w-full"
+              src={post.fields.titleImage.fields.file.url}
+              alt={post.fields.title}
+              className="w-full"
             />
-        )}
-        <h1 className='font-teko font-[700] py-10 lg:py-0 text-4xl md:text-5xl lg:text-6xl'>{post.fields.title}</h1>
-        <div className='bg-gray-200 h-px w-full'></div>
-        {post.fields.content && (
-                <div className='font-ssp font-[400] text-xl text-[rgb(0,0,0,0.8)]'>
-                  {documentToReactComponents(post.fields.content, options)}
-                </div>
-              )}
-      </div>
+          )}
+          <h1 className='font-teko font-[700] py-10 lg:py-0 text-4xl md:text-5xl lg:text-6xl'>{post.fields.title}</h1>
+          <div className='bg-gray-200 h-px w-full'></div>
+          {post.fields.content && (
+            <div className='font-ssp font-[400] text-xl text-[rgb(0,0,0,0.8)]'>
+              {documentToReactComponents(post.fields.content, options)}
+            </div>
+          )}
+        </div>
+      </>
     );
   }
 }
