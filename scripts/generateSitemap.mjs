@@ -30,7 +30,7 @@ async function generateSitemap() {
       const lastMod = new Date(item.sys.updatedAt).toISOString();
       urls.push(`
         <url>
-          <loc>https://skylerdev.netlify.app/${slug}</loc>
+          <loc>https://skylerdev.netlify.app/blog/${slug}</loc>
           <lastmod>${lastMod}</lastmod>
           <changefreq>weekly</changefreq>
         </url>
@@ -49,9 +49,9 @@ async function generateSitemap() {
     const outputPath = join(process.cwd(), 'public/sitemap.xml');
     await writeFile(outputPath, sitemapContent);
 
-    console.log('Sitemap generated successfully at:', outputPath);
+    // console.log('Sitemap generated successfully at:', outputPath);
   } catch (error) {
-    console.error('Error generating sitemap:', error);
+    // console.error('Error generating sitemap:', error);
     process.exit(1);
   }
 }
