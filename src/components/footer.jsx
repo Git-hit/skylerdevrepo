@@ -10,6 +10,18 @@ export default function Footer(){
         {
             href: '/contact',
             name: 'Contact'
+        },
+        {
+            href: '/privacy-policy',
+            name: 'Privacy Policy'
+        },
+        {
+            href: '/terms-and-conditions',
+            name: 'Terms & Conditions'
+        },
+        {
+            href: '/shipping',
+            name: 'Shipping'
         }
     ]
 
@@ -43,7 +55,7 @@ export default function Footer(){
                 <div className="mt-4 text-center sm:mt-0 md:w-1/4">
                     &copy; 2024 Skyler Dev | All rights reserved.
                 </div>
-                <ul className="md:w-2/4 items-center justify-center mt-5 flex flex-row md:flex-row space-x-4">
+                <ul className="md:w-2/4 items-center justify-center mt-5 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                     {
                         footerNavs.map((item, idx) => (
                             <li key={idx} className=" hover:text-white transition-all duration-300">

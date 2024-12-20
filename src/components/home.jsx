@@ -3,6 +3,7 @@ import Features from "./features";
 import Hero from "./hero";
 import WhoWeAre from "./whoWeAre";
 import TabNavs from "./tabnavs";
+import Pricing from "./pricing";
 // import TechStack from "./techStack";
 
 export default function Home(){
@@ -16,6 +17,7 @@ export default function Home(){
             </Helmet>
             <Hero />
             <WhoWeAre />
+            <Pricing />
             <Features />
             <TabNavs />
             {/* <TechStack /> */}

@@ -8,9 +8,11 @@ export default function Navbar(){
   // Replace javascript:void(0) path with your path
   const navigation = [
       { title: "Home", path: "/" },
-    //   { title: "Recent Works", path: "javascript:void(0)" },
       { title: "Blog", path: "/blog" },
-      { title: "Contact", path: "/contact" }
+      { title: "Contact", path: "/contact" },
+      { title: "Privacy Policy", path: "/privacy-policy" },
+      { title: "Terms & Conditions", path: "/terms-and-conditions" },
+      { title: "Shipping", path: "/shipping" }
   ]
 
   return (
