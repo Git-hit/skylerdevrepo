@@ -53,7 +53,7 @@ export default function Footer(){
             </div>
             <div className="mt-8 items-center justify-between flex flex-col-reverse md:flex-row">
                 <div className="mt-4 text-center sm:mt-0 md:w-1/4">
-                    &copy; 2024 Skyler Dev | All rights reserved.
+                    &copy; 2025 Skyler Dev | All rights reserved.
                 </div>
                 <ul className="md:w-2/4 items-center justify-center mt-5 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
                     {
