@@ -9,10 +9,10 @@ export default function Navbar(){
   const navigation = [
       { title: "Home", path: "/" },
       { title: "Blog", path: "/blog" },
-      { title: "Contact", path: "/contact" },
       { title: "Privacy Policy", path: "/privacy-policy" },
       { title: "Terms & Conditions", path: "/terms-and-conditions" },
-      { title: "Shipping", path: "/shipping" }
+      { title: "Shipping", path: "/shipping" },
+      { title: "Contact", path: "/contact" },
   ]
 
   return (
