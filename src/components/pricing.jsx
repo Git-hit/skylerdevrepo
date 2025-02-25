@@ -54,7 +54,7 @@ export default function Pricing() {
 
                             <div className="mt-auto">
                                 {/* <a href="#" className="block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">$0 / Free</a> */}
-                                <Button content="Starting from ₹10000" ghost link="/contact" className="w-full" paddingX="px-8" paddingY="py-3" />
+                                <Button content="Starting from ₹9999" ghost link="/contact" className="w-full" paddingX="px-8" paddingY="py-3" />
                             </div>
                         </div>
                     </div>
@@ -113,7 +113,7 @@ export default function Pricing() {
 
                             <div className="mt-auto">
                                 {/* <a href="#" className="block rounded-lg bg-skylerBlue px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">$19</a> */}
-                                <Button content="Starting from ₹25000" link="/contact" className="w-full" paddingX="px-8" paddingY="py-3" />
+                                <Button content="Starting from ₹24999" link="/contact" className="w-full" paddingX="px-8" paddingY="py-3" />
                             </div>
                         </div>
                     </div>
