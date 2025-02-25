@@ -1,5 +1,13 @@
+import { Helmet } from "react-helmet-async";
+
 export const TermsAndConditions = () => (
     <div className="text-center container mx-auto p-6">
+        <Helmet>
+            <title>Skyler Dev | Terms & Conditions</title>
+            <meta name="description" content='Skyler Dev&#39;s Terms and Conditions' />
+            <meta property="og:title" content='Skyler Dev | Terms and Conditions' />
+            <meta property="og:description" content='Skyler Dev&#39;s Terms and Conditions' />
+        </Helmet>
         <h1 className="text-3xl mt-28 font-bold mb-4">Terms and Conditions</h1>
         <p className="mb-4">
             By using Skyler Dev ("we," "our," "us") web development services, you agree to these terms and conditions. Please read them carefully.

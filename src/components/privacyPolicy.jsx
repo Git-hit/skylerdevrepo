@@ -1,5 +1,13 @@
+import { Helmet } from "react-helmet-async";
+
 export const PrivacyPolicy = () => (
     <div className="text-center container mx-auto p-6">
+        <Helmet>
+            <title>Skyler Dev | Privacy Policy</title>
+            <meta name="description" content='We at Skyler Dev care about your privacy.' />
+            <meta property="og:title" content='Skyler Dev | Privacy Policy' />
+            <meta property="og:description" content='We at Skyler Dev care about your privacy.' />
+        </Helmet>
         <h1 className="text-3xl mt-28 font-bold mb-4">Privacy Policy</h1>
         <p className="mb-4">
             Skyler Dev ("we," "our," "us") is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, and share your information when you use our web development services.

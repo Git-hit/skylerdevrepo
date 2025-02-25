@@ -1,5 +1,13 @@
+import { Helmet } from "react-helmet-async";
+
 export const Shipping = () => (
     <div className="text-center container mx-auto p-6">
+        <Helmet>
+            <title>Skyler Dev | Shipping Policy</title>
+            <meta name="description" content='Skyler Dev&#39;s Shipping Policy' />
+            <meta property="og:title" content='Skyler Dev | Shipping Policy' />
+            <meta property="og:description" content='Skyler Dev&#39;s Shipping Policy' />
+        </Helmet>
         <h1 className="mt-28 text-3xl font-bold mb-4">Shipping Policy</h1>
         <p className="mb-4">
             Skyler Dev ("we," "our," "us") specializes in web development and does not involve physical product shipping. However, the following policies apply to the delivery of digital services and assets.
